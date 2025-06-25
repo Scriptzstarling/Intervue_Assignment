@@ -20,17 +20,17 @@
         box-shadow: 0 2px 6px rgba(20, 20, 43, 0.06);
       }
     </style>
-  </head>
+ </head>
   <body class="bg-white text-brand">
     <!-- Header -->
-  <header class="flex justify-between items-center p-6 border-b border-[#EFF0F6]">
+   <header class="flex justify-between items-center p-6 border-b border-[#EFF0F6] flex-wrap relative">
   <!-- Logo -->
-  <div class="text-2xl font-semibold tracking-wide">int<span class="inline-block rotate-180">e</span>rvue</div>
+  <div class="text-2xl font-semibold tracking-wide mb-2 sm:mb-0">int<span class="inline-block rotate-180">e</span>rvue</div>
 
-  <!-- NAV + AUTH GROUP -->
-  <div class="flex items-center space-x-8 ml-auto">
+  <!-- NAV + AUTH GROUP (Desktop only) -->
+  <div class="hidden md:flex flex-wrap justify-end items-center gap-4 ml-auto">
     <!-- Navigation Links -->
-    <nav class="space-x-6 text-sm font-medium hidden md:block">
+    <nav class="space-x-6 text-sm font-medium">
       <a href="#" class="hover:underline underline-offset-4 transition">Become an Interviewer ↗</a>
       <a href="#" class="hover:underline underline-offset-4 transition">Features</a>
       <a href="#" class="hover:underline underline-offset-4 transition">Pricing</a>
@@ -38,12 +38,44 @@
     </nav>
 
     <!-- Auth Buttons -->
-    <div class="space-x-4 hidden md:flex">
+    <div class="space-x-4">
       <button class="px-5 py-1.5 border border-[#D9DBE9] rounded text-sm hover:bg-[#F7F7FC] transition">Login</button>
       <button class="px-5 py-1.5 rounded bg-black text-white text-sm hover:opacity-90 transition">Signup</button>
     </div>
   </div>
+
+  <!-- Hamburger Button -->
+  <div class="block md:hidden ml-auto mt-2 cursor-pointer" onclick="toggleMobileMenu()">
+    <div class="w-6 h-0.5 bg-black mb-1"></div>
+    <div class="w-6 h-0.5 bg-black mb-1"></div>
+    <div class="w-6 h-0.5 bg-black"></div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="w-full mt-4 space-y-4 hidden md:hidden">
+    <!-- Navigation Links -->
+    <nav class="flex flex-col space-y-2 text-sm font-medium">
+      <a href="#" class="hover:underline">Become an Interviewer ↗</a>
+      <a href="#" class="hover:underline">Features</a>
+      <a href="#" class="hover:underline">Pricing</a>
+      <a href="#" class="hover:underline">Start a trial</a>
+    </nav>
+
+    <!-- Auth Buttons -->
+    <div class="flex gap-2">
+      <button class="flex-1 px-4 py-2 border border-[#D9DBE9] rounded text-sm hover:bg-[#F7F7FC] transition">Login</button>
+      <button class="flex-1 px-4 py-2 rounded bg-black text-white text-sm hover:opacity-90 transition">Signup</button>
+    </div>
+  </div>
 </header>
+
+<!-- JavaScript for Toggle -->
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
 
     <!-- Title + Search -->
 <section class="text-center py-16 px-4">
@@ -328,28 +360,30 @@
 
 
 <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-[#27282C] text-white px-6 md:px-20 lg:px-40 pt-24 pb-16">
   <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_repeat(4,1fr)] gap-12">
 
     <!-- Column: Logo + Socials + Email -->
-    <div class="flex flex-col items-start gap-4 mt-[-40px]">
+    <div class="flex flex-col items-center md:items-start gap-4 mt-[-40px]">
       <!-- Logo -->
-  <div class="text-white text-3xl tracking-wide leading-none flex">
-    <span>int</span>
-    <span class="inline-block rotate-180">e</span>
-    <span>rvu</span>
-    <span class="inline-block rotate-180">e</span>
-  </div>
-      <!-- Social Icons -->
-      <div class="flex gap-6 text-sm text-[#A0A3BD]">
+      <div class="text-white text-3xl tracking-wide leading-none flex justify-center md:justify-start w-full">
+        <span>int</span>
+        <span class="inline-block rotate-180">e</span>
+        <span>rvu</span>
+        <span class="inline-block rotate-180">e</span>
+      </div>
+
+      <!-- Social Text (Desktop Only) -->
+      <div class="hidden md:flex gap-6 text-sm text-[#A0A3BD]">
         <a href="#" class="hover:underline">Facebook</a>
         <a href="#" class="hover:underline">Instagram</a>
         <a href="#" class="hover:underline">Linkedin</a>
         <a href="#" class="hover:underline">Pinterest</a>
       </div>
 
-      <!-- Email Input -->
-      <div class="pt-2">
+      <!-- Email Input (centered and slightly left on mobile) -->
+      <div class="pt-2 ml-6 md:ml-0 flex flex-col items-start md:items-start w-full">
         <p class="text-[#F4B740] font-semibold text-sm mb-2">Hire better &amp; faster</p>
         <div class="flex items-center border-b border-[#4E4B66] pb-1 w-[280px]">
           <input
@@ -362,47 +396,87 @@
       </div>
     </div>
 
-    <!-- Column: Company -->
-    <div class="space-y-3 text-sm text-[#A0A3BD]">
-      <h4 class="text-white font-semibold mb-1">Company</h4>
-      <p class="hover:underline cursor-pointer">So gehts</p>
-      <p class="hover:underline cursor-pointer">Erfahrung</p>
-      <p class="hover:underline cursor-pointer">Aligner</p>
-      <p class="hover:underline cursor-pointer">Preise</p>
-      <p class="hover:underline cursor-pointer">Standorte</p>
-    </div>
+    <!-- Responsive Columns -->
+    <div class="md:col-span-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-[#A0A3BD]">
+      <!-- Desktop Columns -->
+      <div class="hidden md:block">
+        <h4 class="text-white font-semibold mb-1">Company</h4>
+        <p class="hover:underline cursor-pointer">So gehts</p>
+        <p class="hover:underline cursor-pointer">Erfahrung</p>
+        <p class="hover:underline cursor-pointer">Aligner</p>
+        <p class="hover:underline cursor-pointer">Preise</p>
+        <p class="hover:underline cursor-pointer">Standorte</p>
+      </div>
+      <div class="hidden md:block">
+        <h4 class="text-white font-semibold mb-1">Resources</h4>
+        <p class="hover:underline cursor-pointer">Blog</p>
+        <p class="hover:underline cursor-pointer">FAQ</p>
+        <p class="hover:underline cursor-pointer">Lift Media</p>
+        <p class="hover:underline cursor-pointer">Offene Stellen</p>
+        <p class="hover:underline cursor-pointer">Presse kit</p>
+      </div>
+      <div class="hidden md:block">
+        <h4 class="text-white font-semibold mb-1">Product</h4>
+        <p class="hover:underline cursor-pointer">Gratis Termin</p>
+        <p class="hover:underline cursor-pointer">Freunde einladen</p>
+        <p class="hover:underline cursor-pointer">Patienteninforma</p>
+      </div>
+      <div class="hidden md:block">
+        <h4 class="text-white font-semibold mb-1">Product</h4>
+        <p class="hover:underline cursor-pointer">Blog</p>
+        <p class="hover:underline cursor-pointer">FAQ</p>
+        <p class="hover:underline cursor-pointer">Lift Media</p>
+        <p class="hover:underline cursor-pointer">Offene Stellen</p>
+        <p class="hover:underline cursor-pointer">Presse kit</p>
+      </div>
 
-    <!-- Column: Resources -->
-    <div class="space-y-3 text-sm text-[#A0A3BD]">
-      <h4 class="text-white font-semibold mb-1">Resources</h4>
-      <p class="hover:underline cursor-pointer">Blog</p>
-      <p class="hover:underline cursor-pointer">FAQ</p>
-      <p class="hover:underline cursor-pointer">Lift Media</p>
-      <p class="hover:underline cursor-pointer">Offene Stellen</p>
-      <p class="hover:underline cursor-pointer">Presse kit</p>
-    </div>
-
-    <!-- Column: Product 1 -->
-    <div class="space-y-3 text-sm text-[#A0A3BD]">
-      <h4 class="text-white font-semibold mb-1">Product</h4>
-      <p class="hover:underline cursor-pointer">Gratis Termin</p>
-      <p class="hover:underline cursor-pointer">Freunde einladen</p>
-      <p class="hover:underline cursor-pointer">Patienteninforma</p>
-    </div>
-
-    <!-- Column: Product 2 -->
-    <div class="space-y-3 text-sm text-[#A0A3BD]">
-      <h4 class="text-white font-semibold mb-1">Product</h4>
-      <p class="hover:underline cursor-pointer">Blog</p>
-      <p class="hover:underline cursor-pointer">FAQ</p>
-      <p class="hover:underline cursor-pointer">Lift Media</p>
-      <p class="hover:underline cursor-pointer">Offene Stellen</p>
-      <p class="hover:underline cursor-pointer">Presse kit</p>
+      <!-- Mobile Columns -->
+      <div class="block md:hidden">
+        <h4 class="text-white font-semibold mb-1">Menu</h4>
+        <p class="hover:underline cursor-pointer">Home</p>
+        <p class="hover:underline cursor-pointer">Pricing</p>
+        <p class="hover:underline cursor-pointer">Case studies</p>
+        <p class="hover:underline cursor-pointer">Features</p>
+        <p class="hover:underline cursor-pointer">Downloads</p>
+        <p class="hover:underline cursor-pointer">Updates</p>
+        <p class="hover:underline cursor-pointer">Changelog</p>
+      </div>
+      <div class="block md:hidden">
+        <h4 class="text-white font-semibold mb-1">Company</h4>
+        <p class="hover:underline cursor-pointer">About</p>
+        <p class="hover:underline cursor-pointer">Contact us</p>
+        <p class="hover:underline cursor-pointer">Careers</p>
+        <p class="hover:underline cursor-pointer">Culture</p>
+        <p class="hover:underline cursor-pointer">Help Center</p>
+        <p class="hover:underline cursor-pointer">Support</p>
+        <p class="hover:underline cursor-pointer">Legal</p>
+      </div>
+      <div class="block md:hidden">
+        <h4 class="text-white font-semibold mb-1">Menu</h4>
+        <p class="hover:underline cursor-pointer">Home</p>
+        <p class="hover:underline cursor-pointer">Pricing</p>
+        <p class="hover:underline cursor-pointer">Case studies</p>
+        <p class="hover:underline cursor-pointer">Features</p>
+        <p class="hover:underline cursor-pointer">Downloads</p>
+        <p class="hover:underline cursor-pointer">Updates</p>
+        <p class="hover:underline cursor-pointer">Changelog</p>
+      </div>
+      <div class="block md:hidden">
+        <h4 class="text-white font-semibold mb-1">Company</h4>
+        <p class="hover:underline cursor-pointer">About</p>
+        <p class="hover:underline cursor-pointer">Contact us</p>
+        <p class="hover:underline cursor-pointer">Careers</p>
+        <p class="hover:underline cursor-pointer">Culture</p>
+        <p class="hover:underline cursor-pointer">Help Center</p>
+        <p class="hover:underline cursor-pointer">Support</p>
+        <p class="hover:underline cursor-pointer">Legal</p>
+      </div>
     </div>
   </div>
 
   <!-- Footer Bottom Row -->
-  <div class="mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-[#A0A3BD] gap-2">
+  <!-- Desktop Version -->
+  <div class="hidden md:flex mt-12 pt-6 flex-col md:flex-row justify-between items-center text-xs text-[#A0A3BD] gap-2">
     <p>© 2023 Intervue. Crafted by great minds.</p>
     <div class="flex gap-4 flex-wrap justify-center">
       <a href="#" class="hover:underline">Datenschutz</a>
@@ -411,5 +485,22 @@
       <a href="#" class="hover:underline">AGBs</a>
     </div>
   </div>
+
+  <!-- Mobile Version -->
+  <div class="flex md:hidden mt-12 pt-6 flex-col items-center text-xs text-[#A0A3BD] gap-2">
+    <div class="flex gap-4 mb-2">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/facebook--v1.png" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/instagram-new--v1.png" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/linkedin.png" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/ffffff/pinterest--v1.png" /></a>
+    </div>
+    <p>© 2023 Intervue. Crafted by great minds.</p>
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#" class="hover:underline">Privacy</a>
+      <a href="#" class="hover:underline">Terms</a>
+      <a href="#" class="hover:underline">Contact</a>
+    </div>
+  </div>
 </footer>
+
 
