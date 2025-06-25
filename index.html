@@ -30,15 +30,26 @@
   <!-- Header -->
   <header class="flex justify-between items-center p-6 border-b border-[#EFF0F6] flex-wrap relative">
     <!-- Logo -->
- <div class="text-2xl font-semibold tracking-wide mb-2 sm:mb-0">
-  int<span class="relative inline-block align-baseline">
-    <span class="rotate-180 inline-block">e</span>
-    <span class="absolute left-0 right-0 bottom-1 h-[2px] bg-black"></span>
-  </span>rvu<span class="relative inline-block align-baseline">
-    <span class="rotate-180 inline-block">e</span>
-    <span class="absolute left-0 right-0 bottom-1 h-[2px] bg-black"></span>
+<div class="text-2xl font-semibold tracking-wide mb-2 sm:mb-0 flex items-end gap-[2px]">
+  <span>int</span>
+
+   <span class="relative inline-block translate-y-[-7px]">
+    <span class="inline-block">e</span>
+    <span class="absolute left-0 right-0 bottom-[0.6px] h-[4px] bg-black rounded-full w-full"></span>
+  </span>
+
+  <span>rvu</span>
+
+  <!-- Flipped 'e' with underline, lifted up -->
+  <span class="relative inline-block scale-x-[-1] translate-y-[-7px]">
+    <span class="inline-block">e</span>
+    <span class="absolute left-0 right-0 bottom-[0.6px] h-[4px] bg-black rounded-full w-full"></span>
   </span>
 </div>
+
+
+
+
     <!-- NAV + AUTH GROUP (Desktop only) -->
     <div class="hidden md:flex flex-wrap justify-end items-center gap-4 ml-auto">
       <!-- Navigation Links -->
@@ -528,21 +539,24 @@
     <!-- Logo & Newsletter -->
     <div class="flex flex-col items-center md:items-start gap-4 mt-[-40px] col-span-full md:col-span-1">
       <!-- Logo -->
-      <div class="text-white text-3xl tracking-wide leading-none flex justify-center md:justify-start w-full">
+  <div class="text-white text-3xl tracking-wide leading-none flex justify-center md:justify-start w-full font-bold space-x-1">
   <span>int</span>
 
-  <span class="relative inline-block align-baseline">
-    <span class="rotate-180 inline-block">e</span>
-    <span class="absolute left-0 right-0 bottom-0 h-[2px] bg-white"></span>
+  <!-- Normal 'e' with underline, lifted up more clearly -->
+  <span class="relative inline-block translate-y-[-7px]">
+    <span class="inline-block">e</span>
+    <span class="absolute left-0 right-0 bottom-[-2px] h-[5px] bg-white rounded-full w-full"></span>
   </span>
 
   <span>rvu</span>
 
-  <span class="relative inline-block align-baseline">
-    <span class="rotate-180 inline-block">e</span>
-    <span class="absolute left-0 right-0 bottom-0 h-[2px] bg-white"></span>
+  <!-- Flipped 'e' with underline, lifted up -->
+  <span class="relative inline-block scale-x-[-1] translate-y-[-7px]">
+    <span class="inline-block">e</span>
+    <span class="absolute left-0 right-0 bottom-[-2px] h-[5px] bg-white rounded-full w-full"></span>
   </span>
 </div>
+
       <!-- Social Icons (Desktop Only) -->
       <div class="hidden md:flex gap-6 text-sm text-[#A0A3BD]">
         <a href="#" class="hover:underline">Facebook</a>
