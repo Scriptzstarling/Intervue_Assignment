@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intervue Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Sora', sans-serif;
+      }
+      .text-brand {
+        color: #14142B;
+      }
+      .text-muted {
+        color: #6E7191;
+      }
+      .shadow-input {
+        box-shadow: 0 2px 6px rgba(20, 20, 43, 0.06);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-brand">
+    <!-- Header -->
+  <header class="flex justify-between items-center p-6 border-b border-[#EFF0F6]">
+  <!-- Logo -->
+  <div class="text-2xl font-semibold tracking-wide">int<span class="inline-block rotate-180">e</span>rvue</div>
+
+  <!-- NAV + AUTH GROUP -->
+  <div class="flex items-center space-x-8 ml-auto">
+    <!-- Navigation Links -->
+    <nav class="space-x-6 text-sm font-medium hidden md:block">
+      <a href="#" class="hover:underline underline-offset-4 transition">Become an Interviewer ↗</a>
+      <a href="#" class="hover:underline underline-offset-4 transition">Features</a>
+      <a href="#" class="hover:underline underline-offset-4 transition">Pricing</a>
+      <a href="#" class="hover:underline underline-offset-4 transition">Start a trial</a>
+    </nav>
+
+    <!-- Auth Buttons -->
+    <div class="space-x-4 hidden md:flex">
+      <button class="px-5 py-1.5 border border-[#D9DBE9] rounded text-sm hover:bg-[#F7F7FC] transition">Login</button>
+      <button class="px-5 py-1.5 rounded bg-black text-white text-sm hover:opacity-90 transition">Signup</button>
+    </div>
+  </div>
+</header>
+
+    <!-- Title + Search -->
+<section class="text-center py-16 px-4">
+  <h1 class="text-3xl font-semibold mb-3">Technical Interview Resources</h1>
+  <p class="text-muted text-sm mb-6">Find all the technical interview resources here</p>
+
+  <div class="flex justify-center">
+    <div class="relative w-[330px] sm:w-[360px] md:w-[400px]">
+      <!-- Search Icon -->
+      <img
+        src="https://img.icons8.com/ios-filled/24/search--v1.png"
+        alt="Search"
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
+      />
+
+      <!-- Input -->
+      <input
+        type="text"
+        placeholder="Search for resource here"
+        class="w-full pl-10 pr-4 py-2.5 rounded-full border border-[#E4E4E7] bg-[#F5F5F7] placeholder-[#A0A3BD] text-sm focus:outline-none focus:ring-2 focus:ring-[#14142B] shadow-input transition"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Cards -->
+    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <!-- Card repeated 9 times with alternating difficulty -->
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#007AFF] text-white inline-block w-fit">Easy</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Design a Free Food App</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#F4B740] text-white inline-block w-fit">Medium</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Build a Chatbot Interface</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#00BA88] text-white inline-block w-fit">Hard</span>
+  <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Real-time Video Interview Platform</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#007AFF] text-white inline-block w-fit">Easy</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Design a Free Food App</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#F4B740] text-white inline-block w-fit">Medium</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Build a Chatbot Interface</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#00BA88] text-white inline-block w-fit">Hard</span>
+  <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Real-time Video Interview Platform</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#007AFF] text-white inline-block w-fit">Easy</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Design a Free Food App</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">Design a free food delivery app based on our cohort of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#F4B740] text-white inline-block w-fit">Medium</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Build a Chatbot Interface</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#00BA88] text-white inline-block w-fit">Hard</span>
+  <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Real-time Video Interview Platform</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#007AFF] text-white inline-block w-fit">Easy</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Design a Free Food App</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#F4B740] text-white inline-block w-fit">Medium</span>
+   <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Build a Chatbot Interface</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+<div class="h-60 p-4 border border-[#D0D3E6] rounded shadow-sm hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+  <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#00BA88] text-white inline-block w-fit">Hard</span>
+  <span class="text-[11px] text-muted uppercase tracking-wide">DATA STRUCTURES & ALGORITHMS</span>
+  <h3 class="font-semibold mt-2 text-sm">Real-time Video Interview Platform</h3>
+  <p class="text-sm text-muted mt-1 leading-relaxed">We created this guide after speaking with our community or interviewers, which includes over 100 current and former Amazon engineers, as well as our corpus of mock interviews</p>
+</div>
+
+      <!-- Repeat or copy these three to complete 9 cards -->
+    </section>
+
+    <!-- Security Section -->
+<!-- Security Section -->
+<section class="py-16 bg-[#F8F6F9]">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Heading -->
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">Security is our top priority</h2>
+      <p class="text-[#6E7191] text-sm max-w-xl">
+        Intervue serves startups to fortune 500 companies with enterprise grade security baked in by design
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid md:grid-cols-[1fr_1fr_1fr] gap-4">
+      <!-- Card 1 -->
+      <div class="bg-white px-6 py-6 rounded border border-[#EFF0F6] shadow-sm hover:shadow-md hover:scale-[1.02] transition duration-300 flex flex-col justify-between h-[230px] w-full">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/24/000000/key.png" alt="key" class="w-5 h-5 mb-3" />
+          <h3 class="font-semibold text-sm mb-4">Security</h3>
+          <p class="text-[#6E7191] text-xs leading-relaxed">
+            Protecting your data at every layer is fundamental to how intervue works
+          </p>
+        </div>
+        <div class="text-right text-lg text-[#14142B] mt-2">→</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white px-6 py-6 rounded border border-[#EFF0F6] shadow-sm hover:shadow-md hover:scale-[1.02] transition duration-300 flex flex-col justify-between h-[230px] w-full">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/50/task.png" alt="compliance" class="w-5 h-5 mb-3" />
+          <h3 class="font-semibold text-sm mb-4">Compliances</h3>
+          <p class="text-[#6E7191] text-xs leading-relaxed">
+            Enterprise grade compliance commitments where we have established controls to adhere to those commitments
+          </p>
+        </div>
+        <div class="text-right text-lg text-[#14142B] mt-2">→</div>
+      </div>
+
+      <!-- Stack Card -->
+      <div class="flex flex-col gap-3">
+        <!-- Startups -->
+        <div class="bg-white px-5 py-5 rounded border border-[#EFF0F6] shadow-sm hover:shadow-md hover:scale-[1.02] transition duration-300 flex flex-col justify-between h-[105px]">
+          <div class="flex flex-col gap-2">
+            <img src="https://img.icons8.com/ios-filled/24/000000/rocket.png" alt="startups" class="w-5 h-5" />
+            <h3 class="font-semibold text-sm">Intervue for Startups</h3>
+          </div>
+          <div class="text-right text-lg text-[#14142B]">→</div>
+        </div>
+
+        <!-- Enterprises -->
+        <div class="bg-white px-5 py-5 rounded border border-[#EFF0F6] shadow-sm hover:shadow-md hover:scale-[1.02] transition duration-300 flex flex-col justify-between h-[105px]">
+          <div class="flex flex-col gap-2">
+            <img src="https://img.icons8.com/ios-filled/24/000000/internet.png" alt="enterprise" class="w-5 h-5" />
+            <h3 class="font-semibold text-sm">Intervue for Enterprises</h3>
+          </div>
+          <div class="text-right text-lg text-[#14142B]">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Testimonial -->
+    <section class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left Image -->
+        <div class="relative w-full h-full">
+          <img src="/assets/Niket_Gupta.jpg" alt="Niket Gupta" class="rounded-l-[5px] object-cover w-full h-full max-h-[320px]" />
+          <div class="absolute bottom-6 left-6 text-white">
+          </div>
+        </div>
+
+        <!-- Testimonial Text -->
+        <div>
+          <p class="text-[#14142B] text-base mb-4">
+            After interviewing candidates on <span class="font-medium">Intervue</span>, we were able to convert at least 5% of people from our application base to hires.
+          </p>
+          <p class="font-semibold text-sm text-[#14142B]">Niket Gupta</p>
+          <p class="text-sm text-[#6E7191]">Group head of talent acquisition, Yubi</p>
+          <a href="#" class="text-[#1B4DFB] text-sm mt-3 inline-block hover:underline">See more customer stories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Products -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-center mb-10">Explore more products on intervue</h2>
+
+    <div class="flex flex-wrap justify-center gap-4 md:gap-x-6 md:gap-y-8">
+      <!-- On-demand Card -->
+      <div class="bg-gray-50 p-5 w-[300px] border border-[#D0D3E6] rounded-xl shadow-sm hover:scale-[1.02] hover:shadow-md transition-transform duration-300 ease-in-out">
+        <img src="/assets/product1.png" alt="On-demand" class="mb-4 w-full rounded-lg" />
+        <h3 class="font-semibold text-lg mb-2">On-demand</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Save 90% of engineering & recruitment bandwidth, outsource candidate interviews to us
+        </p>
+        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Know more →</a>
+      </div>
+
+      <!-- Live Interviews -->
+      <div class="bg-gray-50 p-5 w-[300px] border border-[#D0D3E6] rounded-xl shadow-sm hover:scale-[1.02] hover:shadow-md transition-transform duration-300 ease-in-out">
+        <img src="/assets/product2.png" alt="Live Interviews" class="mb-4 w-full rounded-lg" />
+        <h3 class="font-semibold text-lg mb-2">Live interviews</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Assess candidates in real-time with our live coding environment & integrated video calls
+        </p>
+        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Know more →</a>
+      </div>
+
+      <!-- Assessments -->
+      <div class="bg-gray-50 p-5 w-[300px] border border-[#D0D3E6] rounded-xl shadow-sm hover:scale-[1.02] hover:shadow-md transition-transform duration-300 ease-in-out">
+        <img src="/assets/product3.png" alt="Assessments" class="mb-4 w-full rounded-lg" />
+        <h3 class="font-semibold text-lg mb-2">Assessments</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Share assessments across batches with MCQ, Programming and Subjective questions.
+        </p>
+        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Know more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-[#FDF0F4] py-16 px-14">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+    
+    <!-- Left Side -->
+    <div class="md:w-1/2">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-2">FAQs</h2>
+      <p class="text-[#6E7191] text-sm mb-3 max-w-sm">
+        Here are frequently asked questions to clear all your doubts.
+      </p>
+
+      <div class="mt-6">
+        <p class="text-sm font-semibold text-[#14142B]">Still have doubts?</p>
+        <a href="#" class="text-[#1B4DFB] text-sm font-bold inline-block mt-1 hover:underline">
+          📞 Talk to our representative
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side (Accordion Questions) -->
+    <div class="md:w-1/2 space-y-4 border-t-2 border-[#4E4B66] divide-y-2 divide-[#4E4B66]">
+  <details class="py-4 cursor-pointer">
+    <summary class="flex justify-between items-center font-medium text-sm text-[#14142B]">
+      <span>How do I schedule an interview?</span>
+      <span class="text-lg font-bold">+</span>
+    </summary>
+  </details>
+  <details class="py-4 cursor-pointer">
+    <summary class="flex justify-between items-center font-medium text-sm text-[#14142B]">
+      <span>Will I be charged per interview?</span>
+      <span class="text-lg font-bold">+</span>
+    </summary>
+  </details>
+  <details class="py-4 cursor-pointer">
+    <summary class="flex justify-between items-center font-medium text-sm text-[#14142B]">
+      <span>Can I get a trial for On-demand interviews?</span>
+      <span class="text-lg font-bold">+</span>
+    </summary>
+  </details>
+</div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-[#27282C] text-white px-6 md:px-20 lg:px-40 pt-24 pb-16">
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_repeat(4,1fr)] gap-12">
+
+    <!-- Column: Logo + Socials + Email -->
+    <div class="flex flex-col items-start gap-4 mt-[-40px]">
+      <!-- Logo -->
+  <div class="text-white text-3xl tracking-wide leading-none flex">
+    <span>int</span>
+    <span class="inline-block rotate-180">e</span>
+    <span>rvu</span>
+    <span class="inline-block rotate-180">e</span>
+  </div>
+      <!-- Social Icons -->
+      <div class="flex gap-6 text-sm text-[#A0A3BD]">
+        <a href="#" class="hover:underline">Facebook</a>
+        <a href="#" class="hover:underline">Instagram</a>
+        <a href="#" class="hover:underline">Linkedin</a>
+        <a href="#" class="hover:underline">Pinterest</a>
+      </div>
+
+      <!-- Email Input -->
+      <div class="pt-2">
+        <p class="text-[#F4B740] font-semibold text-sm mb-2">Hire better &amp; faster</p>
+        <div class="flex items-center border-b border-[#4E4B66] pb-1 w-[280px]">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="bg-transparent text-sm text-white placeholder-[#A0A3BD] w-full outline-none"
+          />
+          <span class="text-[#F4B740] text-xl ml-2">↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column: Company -->
+    <div class="space-y-3 text-sm text-[#A0A3BD]">
+      <h4 class="text-white font-semibold mb-1">Company</h4>
+      <p class="hover:underline cursor-pointer">So gehts</p>
+      <p class="hover:underline cursor-pointer">Erfahrung</p>
+      <p class="hover:underline cursor-pointer">Aligner</p>
+      <p class="hover:underline cursor-pointer">Preise</p>
+      <p class="hover:underline cursor-pointer">Standorte</p>
+    </div>
+
+    <!-- Column: Resources -->
+    <div class="space-y-3 text-sm text-[#A0A3BD]">
+      <h4 class="text-white font-semibold mb-1">Resources</h4>
+      <p class="hover:underline cursor-pointer">Blog</p>
+      <p class="hover:underline cursor-pointer">FAQ</p>
+      <p class="hover:underline cursor-pointer">Lift Media</p>
+      <p class="hover:underline cursor-pointer">Offene Stellen</p>
+      <p class="hover:underline cursor-pointer">Presse kit</p>
+    </div>
+
+    <!-- Column: Product 1 -->
+    <div class="space-y-3 text-sm text-[#A0A3BD]">
+      <h4 class="text-white font-semibold mb-1">Product</h4>
+      <p class="hover:underline cursor-pointer">Gratis Termin</p>
+      <p class="hover:underline cursor-pointer">Freunde einladen</p>
+      <p class="hover:underline cursor-pointer">Patienteninforma</p>
+    </div>
+
+    <!-- Column: Product 2 -->
+    <div class="space-y-3 text-sm text-[#A0A3BD]">
+      <h4 class="text-white font-semibold mb-1">Product</h4>
+      <p class="hover:underline cursor-pointer">Blog</p>
+      <p class="hover:underline cursor-pointer">FAQ</p>
+      <p class="hover:underline cursor-pointer">Lift Media</p>
+      <p class="hover:underline cursor-pointer">Offene Stellen</p>
+      <p class="hover:underline cursor-pointer">Presse kit</p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Row -->
+  <div class="mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-[#A0A3BD] gap-2">
+    <p>© 2023 Intervue. Crafted by great minds.</p>
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#" class="hover:underline">Datenschutz</a>
+      <a href="#" class="hover:underline">Impressum</a>
+      <a href="#" class="hover:underline">Cookie Policy</a>
+      <a href="#" class="hover:underline">AGBs</a>
+    </div>
+  </div>
+</footer>
+
